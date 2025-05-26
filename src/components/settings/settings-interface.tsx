@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
@@ -16,6 +16,12 @@ export function SettingsInterface() {
   const [email, setEmail] = useState("usuario@ejemplo.com")
   const [language, setLanguage] = useState("es")
   const [theme, setTheme] = useState("system")
+  const [userAgent, setUserAgent] = useState("")
+
+  useEffect(() => {
+    // Este código solo se ejecuta en el cliente
+    setUserAgent(navigator.userAgent)
+  }, [])
 
   const handleSave = () => {
     // Lógica para guardar la configuración
@@ -207,7 +213,7 @@ export function SettingsInterface() {
                   <div>
                     <p className="font-medium">Navegador Web</p>
                     <p className="text-sm text-muted-foreground">
-                      {navigator.userAgent}
+                      {userAgent || "Información del navegador no disponible"}
                     </p>
                   </div>
                   <Button variant="outline" size="sm">
