@@ -902,7 +902,7 @@ export function ManualInterface() {
                     )}
 
                     {/* Consejos */}
-                    {(topic as any).tips && (
+                    {Array.isArray((topic as any).tips) && (topic as any).tips.length > 0 && (
                       <div className="space-y-3">
                         <h4 className="font-medium text-sm">Consejos:</h4>
                         <div className="space-y-2">
