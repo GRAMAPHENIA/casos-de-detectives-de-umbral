@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Notifications from "../notification/Notifications";
 
 export default function Menu() {
   return (
-    <nav className="border border-white/20 p-2 m-2 mt-3 rounded-lg flex justify-between">
+    <nav className="p-2 m-2 mt-3 flex justify-between">
       <ul>
         <li>
           <Image
@@ -16,13 +17,7 @@ export default function Menu() {
       </ul>
       <ul>
         <li>
-          <Image
-            className="invert-25 hover:invert-[1] transition-all cursor-pointer"
-            src="/icons/bell-notification.svg"
-            alt="Bell"
-            width={24}
-            height={24}
-          />
+         <Notifications />
         </li>
       </ul>
     </nav>
