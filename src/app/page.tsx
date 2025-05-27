@@ -1,7 +1,13 @@
+import Menu from "@/components/header/menu/menu";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Home</h1>
-    </main>
+    <div className="">
+      <header className="max-w-[320px] mx-auto">
+        <Menu />
+      </header>
+      <main className=""></main>
+      <footer className=""></footer>
+    </div>
   );
 }
