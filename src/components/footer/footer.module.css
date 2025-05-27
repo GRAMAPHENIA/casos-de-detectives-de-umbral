@@ -1,0 +1,42 @@
+.footer {
+  margin-top: 2rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  /* border-top: 1px solid #eaeaea; */
+  /* background-color: #f9f9f9; */
+  border-radius: 8px;
+}
+
+.phraseContainer {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #444;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phrase {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0.5rem;
+  }
+  
+  .phrase {
+    font-size: 0.85rem;
+  }
+}

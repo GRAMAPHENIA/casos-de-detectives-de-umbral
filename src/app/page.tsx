@@ -1,13 +1,19 @@
 import Menu from "@/components/header/menu/menu";
+import NoCases from "@/components/no-cases/no-cases";
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
   return (
-    <div className="">
-      <header className="max-w-[320px] mx-auto">
+    <div className="flex flex-col min-h-screen">
+      <header>
         <Menu />
       </header>
-      <main className=""></main>
-      <footer className=""></footer>
+      <main>
+        <NoCases />
+      </main>
+      <footer className="mt-auto">
+        <Footer />
+      </footer>
     </div>
   );
 }

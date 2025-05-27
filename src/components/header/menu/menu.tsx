@@ -17,7 +17,7 @@ export default function Menu() {
       </ul>
       <ul>
         <li>
-         <Notifications />
+          <Notifications />
         </li>
       </ul>
     </nav>
