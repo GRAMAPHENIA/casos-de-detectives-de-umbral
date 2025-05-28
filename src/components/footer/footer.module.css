@@ -11,18 +11,23 @@
 
 .phraseContainer {
   margin-bottom: 1rem;
-  font-style: italic;
   color: #444;
   min-height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .phrase {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.source {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
 }
 
 .copyright {
