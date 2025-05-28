@@ -22,7 +22,7 @@ export default function UpdatedIndicator() {
 
   return (
     <div
-      className="relative cursor-default hover:opacity-80 transition-opacity"
+      className="relative cursor-default transition-opacity"
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
     >
@@ -34,7 +34,7 @@ export default function UpdatedIndicator() {
         height={24}
       />
       {showTooltip && (
-        <div className="absolute -bottom-20 transform -translate-x-[90%] bg-zinc-900/70 backdrop-blur-xl border border-zinc-700/50 text-zinc-50 px-3 py-2 rounded-lg text-sm z-10 w-[250px] shadow-lg shadow-black/20 ring-1 ring-zinc-800/30">
+        <div className="absolute -bottom-20 transform -translate-x-[90%] bg-zinc-900/20 backdrop-blur-sm border border-zinc-700/50 text-zinc-50 px-3 py-2 rounded-lg text-sm z-10 w-[250px] shadow-lg shadow-black/20 ring-0">
           <p className="mb-1">Actualizado</p>
           <p>{currentDate}</p>
         </div>
