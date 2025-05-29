@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Notifications from "../notification/Notifications";
-import UpdatedIndicator from "@/components/no-cases/UpdatedIndicator";
 
 export default function Menu() {
   return (
@@ -19,9 +18,6 @@ export default function Menu() {
       <ul className="flex gap-4">
         <li>
           <Notifications />
-        </li>
-        <li>
-          <UpdatedIndicator />
         </li>
       </ul>
     </nav>
