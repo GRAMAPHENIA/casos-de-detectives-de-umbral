@@ -1,23 +1,38 @@
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/tooltip";
+import dynamic from "next/dynamic";
 
-export default function Notifications() {
+const NotificationContent = () => {
   return (
-    <>
-      <Tooltip
-        content="Notificaciones"
-        placement="right-start"
-        className="bg-zinc-900 px-4 rounded-lg text-zinc-400"
+    <Tooltip
+      content="Notificaciones"
+      placement="bottom"
+      className="bg-zinc-900 px-4 rounded-lg text-zinc-400"
+    >
+      <button 
+        className="p-1 hover:bg-zinc-800 rounded-md transition-colors"
+        aria-label="Ver notificaciones"
       >
         <Image
-        className="invert-25 hover:invert-[1] transition-all cursor-pointer"
-        src="/icons/bell-notification.svg"
-        alt="Bell"
-        width={24}
-        height={24}
-      />
-      </Tooltip>
-    </>
-    
+          src="/icons/bell-notification.svg"
+          alt="Notificaciones"
+          width={24}
+          height={24}
+          className="invert-25 hover:invert-[1] transition-all"
+        />
+      </button>
+    </Tooltip>
   );
-}
+};
+
+const Notifications = dynamic(
+  () => Promise.resolve(NotificationContent),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="w-6 h-6 bg-zinc-700 rounded-md animate-pulse"></div>
+    )
+  }
+);
+
+export default Notifications;

@@ -1,28 +1,56 @@
+"use client";
+
 import Image from "next/image";
 import Notifications from "../notification/Notifications";
 import { Tooltip } from "@nextui-org/tooltip";
+import dynamic from "next/dynamic";
+
+// Importaciones dinámicas para evitar problemas de hidratación
+const MapButton = dynamic(
+  () => import("../map/MapButton"),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="w-8 h-8 bg-zinc-800 rounded-md animate-pulse"></div>
+    )
+  }
+);
+
+const MenuButton = () => {
+  return (
+    <Tooltip
+      content="Menú"
+      placement="bottom"
+      className="bg-zinc-900 px-4 rounded-lg text-zinc-400"
+    >
+      <button 
+        className="p-1 hover:bg-zinc-800 rounded-md transition-colors"
+        aria-label="Abrir menú"
+      >
+        <Image
+          src="/icons/menu.svg"
+          alt="Menú"
+          width={24}
+          height={24}
+          className="invert-25 hover:invert-[1] transition-all"
+        />
+      </button>
+    </Tooltip>
+  );
+};
 
 export default function Menu() {
   return (
     <nav className="p-2 m-2 mt-3 flex justify-between">
       <ul>
         <li>
-          <Tooltip
-            content="Menú"
-            placement="right-start"
-            className="bg-zinc-900 px-4 rounded-lg text-zinc-400"
-          >
-            <Image
-              className="invert-25 hover:invert-[1] transition-all cursor-pointer"
-              src="/icons/menu.svg"
-              alt="Menu"
-              width={24}
-              height={24}
-            />
-          </Tooltip>
+          <MenuButton />
         </li>
       </ul>
       <ul className="flex gap-4">
+        <li>
+          <MapButton />
+        </li>
         <li>
           <Notifications />
         </li>
