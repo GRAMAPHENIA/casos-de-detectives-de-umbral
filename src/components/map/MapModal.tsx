@@ -13,9 +13,9 @@ const MapPin = ({ caseData, onAccept }: MapPinProps) => {
   
   const getPinStyle = () => {
     switch(caseData.difficulty) {
-      case 'easy': return 'bg-green-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'hard': return 'bg-red-500';
+      case 'easy': return 'bg-teal-500';
+      case 'medium': return 'bg-amber-500';
+      case 'hard': return 'bg-rose-500';
       default: return 'bg-sky-500';
     }
   };
@@ -94,7 +94,7 @@ const MapModal = React.memo(({ isOpen, onClose, cases, onCaseAccept }: {
         <div className="flex-1 overflow-auto p-4">
           {/* Área del mapa simplificada */}
           <div className="relative w-full h-[50vh] bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center">
-            <p className="text-9xl text-zinc-600">?</p>
+            {/* <p className="text-9xl text-zinc-600">?</p> */}
             
             {/* Pines de ubicación de los casos */}
             {memoizedCases.map((caseItem) => (
@@ -119,9 +119,9 @@ const MapModal = React.memo(({ isOpen, onClose, cases, onCaseAccept }: {
                   <div className="flex justify-between items-start">
                     <h4 className="font-medium text-white">{caseItem.title}</h4>
                     <span className={`px-2 py-0.5 text-xs rounded-full ${
-                      caseItem.difficulty === 'easy' ? 'bg-green-500/20 text-green-400' :
-                      caseItem.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
+                      caseItem.difficulty === 'easy' ? 'bg-teal-500/20 text-teal-400' :
+                      caseItem.difficulty === 'medium' ? 'bg-amber-500/20 text-amber-400' :
+                      'bg-rose-500/20 text-rose-400'
                     }`}>
                       {caseItem.difficulty === 'easy' ? 'Fácil' : caseItem.difficulty === 'medium' ? 'Medio' : 'Difícil'}
                     </span>
