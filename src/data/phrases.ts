@@ -63,7 +63,7 @@ export const detectivePhrases: Phrase[] = [
   },
   {
     text: "El crimen no es un acto. Es una consecuencia que alguien intentó esconder con otro error.",
-    source: "Detective Lucía Serrano",
+    source: "Detective Lucía \"La Jefa\" Serrano",
   },
   {
     text: "En los pasillos de una comisaría, la verdad se evapora más rápido que el café.",
