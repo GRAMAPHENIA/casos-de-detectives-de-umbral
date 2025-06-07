@@ -2,7 +2,7 @@
 
 import { Tooltip } from "@nextui-org/tooltip";
 
-import { MapPin } from 'lucide-react';
+import { Map } from "lucide-react";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { Case } from "@/types/case";
@@ -86,8 +86,8 @@ const MapButton = () => {
           className="p-1 hover:bg-zinc-800 rounded-md transition-colors"
           aria-label="Ver mapa de casos"
         >
-          <MapPin
-            className="w-6 h-6"
+          <Map
+            className="w-6 h-6 text-zinc-500"
           />
         </button>
       </Tooltip>
