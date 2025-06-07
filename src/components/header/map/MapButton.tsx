@@ -1,7 +1,7 @@
 'use client';
 
 import { Tooltip } from "@nextui-org/tooltip";
-import Image from "next/image";
+
 import { MapPin } from 'lucide-react';
 import { useState } from "react";
 import dynamic from "next/dynamic";
@@ -17,30 +17,51 @@ const DynamicMapModal = dynamic(
 export const mockCases: Case[] = [
   {
     id: '1',
-    title: 'El Misterio del Reloj Perdido',
-    description: 'Un valioso reloj antiguo ha desaparecido del museo local. Se necesita ayuda para recuperarlo.',
-    location: { x: 30, y: 45 },
+    title: 'El Misterio del Reloj Parado',
+    description: 'Un reloj antiguo se detuvo misteriosamente en la Torre del Reloj.',
+    location: {
+      x: 50,
+      y: 50
+    },
+    locationText: 'Torre del Reloj',
     difficulty: 'medium',
-    reward: 1500,
-    status: 'available'
+    reward: 100,
+    status: 'available',
+    date: '2025-06-07',
+    type: 'otro',
+    content: ['El reloj se detuvo a las 3:00 am.', 'Última vez visto funcionando a las 10:00 pm.'],
   },
   {
     id: '2',
-    title: 'El Secreto de la Mansión Blackwood',
-    description: 'Extraños sucesos están ocurriendo en la antigua mansión. ¿Podrás descubrir la verdad?',
-    location: { x: 70, y: 25 },
+    title: 'El Tesoro Perdido',
+    description: 'Se ha perdido un tesoro legendario en las calles de Umbral.',
+    location: {
+      x: 70,
+      y: 30
+    },
+    locationText: 'Calle Principal',
     difficulty: 'hard',
-    reward: 3000,
-    status: 'available'
+    reward: 500,
+    status: 'available',
+    date: '2025-06-07',
+    type: 'otro',
+    content: ['Última vez visto en la Calle Principal.', 'Testigos reportan luces extrañas.'],
   },
   {
     id: '3',
-    title: 'El Misterio del Gato Desaparecido',
-    description: 'El gato del alcalde ha desaparecido. Pistas sugieren que podría estar en el parque.',
-    location: { x: 50, y: 75 },
+    title: 'El Mensaje en la Botella',
+    description: 'Una botella con un mensaje misterioso apareció en el río.',
+    location: {
+      x: 30,
+      y: 70
+    },
+    locationText: 'Río Umbral',
     difficulty: 'easy',
-    reward: 800,
-    status: 'available'
+    reward: 50,
+    status: 'available',
+    date: '2025-06-07',
+    type: 'otro',
+    content: ['Mensaje en latín.', 'Botella encontrada en la orilla del río.'],
   }
 ];
 

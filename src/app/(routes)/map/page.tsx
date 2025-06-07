@@ -2,7 +2,7 @@
 
 import { Case } from '@/types/case';
 import { generateSlug } from '@/lib/cases';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 // Datos de ejemplo para los casos
@@ -137,8 +137,8 @@ export default function MapPage() {
         <header className="mb-10 text-center">
           <h1 className="text-4xl font-bold text-white mb-2">El Periódico de Umbral</h1>
           <div className="w-32 h-1 bg-blue-500 mx-auto mb-4"></div>
-          <p className="text-zinc-300 italic">"La verdad, aunque esté en la sombra, siempre sale a la luz"</p>
-          <div className="mt-2 text-sm text-zinc-400">Edición del 6 de Junio de 1899</div>
+          <p className="text-zinc-300 italic">&quot;La verdad, aunque esté en la sombra, siempre sale a la luz&quot;</p>
+          <div className="mt-2 text-sm text-zinc-400">Edici&oacute;n del 6 de Junio de 1899</div>
         </header>
         
         <div className="p-8">

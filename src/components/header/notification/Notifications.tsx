@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { Bell } from 'lucide-react';
 import { Tooltip } from "@nextui-org/tooltip";
 import dynamic from "next/dynamic";

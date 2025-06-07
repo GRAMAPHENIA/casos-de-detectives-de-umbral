@@ -6,6 +6,7 @@ import { useState } from "react";
 
 // Componente simplificado para los pines
 const MapPin: React.FC<MapPinProps> = ({ caseData, onAccept }) => {
+  MapPin.displayName = 'MapPin';
   const [isHovered, setIsHovered] = useState(false);
   
   const getPinStyle = () => {

@@ -2,37 +2,69 @@
 
 import { useState, useEffect } from 'react';
 import { Case } from '@/types/case';
-import Image from 'next/image';
-import Link from 'next/link';
 
 // Datos de ejemplo para los casos
 const mockCases: Case[] = [
   {
     id: '1',
-    title: 'El Misterio del Reloj de Arena',
-    description: 'Un valioso reloj de arena ha desaparecido de la mansión Blackwood. El último avistamiento fue anoche en la biblioteca. Se sospecha de la servidumbre.',
-    location: { x: 0, y: 0 },
+    title: 'El Misterio del Reloj Parado',
+    description: 'Un reloj antiguo se detuvo misteriosamente en la Torre del Reloj.',
+    location: {
+      x: 50,
+      y: 50
+    },
+    locationText: 'Torre del Reloj',
     difficulty: 'medium',
-    reward: 1500,
+    reward: 100,
     status: 'available',
+    date: '2025-06-07',
+    type: 'otro',
+    content: ['El reloj se detuvo a las 3:00 am.', 'Última vez visto funcionando a las 10:00 pm.'],
   },
   {
     id: '2',
-    title: 'La Desaparición de la Sra. Whitmore',
-    description: 'La Sra. Whitmore, una respetada dama de la alta sociedad, ha desaparecido sin dejar rastro. Su sombrero y su bolso fueron encontrados en el parque central.',
-    location: { x: 0, y: 0 },
+    title: 'El Tesoro Perdido',
+    description: 'Se ha perdido un tesoro legendario en las calles de Umbral.',
+    location: {
+      x: 70,
+      y: 30
+    },
+    locationText: 'Calle Principal',
     difficulty: 'hard',
-    reward: 2500,
+    reward: 500,
     status: 'available',
+    date: '2025-06-07',
+    type: 'otro',
+    content: ['Última vez visto en la Calle Principal.', 'Testigos reportan luces extrañas.'],
   },
   {
     id: '3',
+    title: 'El Mensaje en la Botella',
+    description: 'Una botella con un mensaje misterioso apareció en el río.',
+    location: {
+      x: 30,
+      y: 70
+    },
+    locationText: 'Río Umbral',
+    difficulty: 'easy',
+    reward: 50,
+    status: 'available',
+    date: '2025-06-07',
+    type: 'otro',
+    content: ['Mensaje en latín.', 'Botella encontrada en la orilla del río.'],
+  },
+  {
+    id: '4',
     title: 'El Mapa del Tesoro Falsificado',
     description: 'Un coleccionista ha sido estafado con un mapa del tesoro falso. Necesitamos encontrar al estafador antes de que desaparezca con el botín.',
     location: { x: 0, y: 0 },
+    locationText: 'Calle del Mercado',
     difficulty: 'easy',
     reward: 800,
     status: 'available',
+    date: '2025-06-07',
+    type: 'estafa',
+    content: ['Mapa encontrado en la librería antigua.', 'Última vez visto el coleccionista en el café de la esquina.'],
   },
 ];
 
@@ -82,8 +114,8 @@ export default function CaseJournal() {
     <div className="space-y-8">
       <div className="bg-blue-500/5 p-6 rounded-lg border-l-4 border-blue-500/50">
         <p className="text-blue-100/80 italic">
-          "Estimado detective, a continuación encontrará los casos que requieren su atención inmediata. 
-          Cada uno presenta sus propios desafíos y misterios por resolver."
+          &quot;Estimado detective, a continuación encontrará los casos que requieren su atención inmediata. 
+          Cada uno presenta sus propios desafíos y misterios por resolver.&quot;
         </p>
       </div>
 
