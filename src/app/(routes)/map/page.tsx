@@ -77,18 +77,7 @@ const NewspaperClipping = ({ caseItem }: { caseItem: Case }) => {
     }
   };
 
-  const getTypeColor = () => {
-    switch(caseItem.type) {
-      case 'desaparicion':
-        return 'border-amber-700';
-      case 'persona_desaparecida':
-        return 'border-red-800';
-      case 'estafa':
-        return 'border-blue-800';
-      default:
-        return 'border-gray-800';
-    }
-  };
+
 
   return (
     <div className="p-6 my-6">

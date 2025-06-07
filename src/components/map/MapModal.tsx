@@ -48,6 +48,7 @@ const MapModal = React.memo(({ isOpen, onClose, cases, onCaseAccept }: {
   cases: Case[];
   onCaseAccept: (caseId: string) => void;
 }) => {
+  MapModal.displayName = 'MapModal';
   // Prevenir renderizados innecesarios
   const memoizedCases = React.useMemo(() => cases, [cases]);
   

@@ -1,4 +1,4 @@
-import { Case, CaseType } from "@/types/case";
+import { Case } from "@/types/case";
 
 // Datos de ejemplo de casos
 const mockCases: Case[] = [
