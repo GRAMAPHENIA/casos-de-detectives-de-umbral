@@ -1,3 +1,7 @@
+export type CaseType = 'desaparicion' | 'persona_desaparecida' | 'estafa' | 'otro';
+
+export type CaseDifficulty = 'easy' | 'medium' | 'hard';
+
 export interface Case {
   id: string;
   title: string;
@@ -6,9 +10,13 @@ export interface Case {
     x: number;
     y: number;
   };
-  difficulty: 'easy' | 'medium' | 'hard';
+  locationText: string;
+  difficulty: CaseDifficulty;
   reward: number;
   status: 'available' | 'in-progress' | 'completed';
+  date: string;
+  type: CaseType;
+  content: string[]; // Contenido detallado del caso
 }
 
 export interface MapPinProps {

@@ -1,14 +1,11 @@
 "use client";
 
 import * as React from 'react';
-import { Button } from "@nextui-org/button";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
-import { Tooltip } from "@nextui-org/tooltip";
 import { Case, MapPinProps } from "@/types/case";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 
 // Componente simplificado para los pines
-const MapPin = ({ caseData, onAccept }: MapPinProps) => {
+const MapPin: React.FC<MapPinProps> = ({ caseData, onAccept }) => {
   const [isHovered, setIsHovered] = useState(false);
   
   const getPinStyle = () => {
