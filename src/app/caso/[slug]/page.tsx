@@ -5,16 +5,16 @@ import { ArrowLeft } from 'lucide-react';
 import type { Case } from '@/types/case';
 
 interface CaseProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+  }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
 type CaseItem = Case;
 
 export default async function CasePage({ params }: CaseProps) {
-  const caseItem = await getCaseBySlug(params.slug);
+  const caseItem = await getCaseBySlug((await params).slug);
 
   if (!caseItem) {
     notFound();
