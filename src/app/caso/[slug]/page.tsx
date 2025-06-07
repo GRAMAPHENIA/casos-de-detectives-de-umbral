@@ -4,11 +4,12 @@ import { getCaseBySlug } from '@/lib/cases';
 import { ArrowLeft } from 'lucide-react';
 import type { Case } from '@/types/case';
 
-type CaseProps = {
+interface CaseProps {
   params: {
     slug: string;
-  } & { searchParams?: { [key: string]: string | string[] | undefined } }
-};
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
 type CaseItem = Case;
 
