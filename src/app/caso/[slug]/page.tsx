@@ -7,7 +7,7 @@ import type { Case } from '@/types/case';
 type CaseProps = {
   params: {
     slug: string;
-  };
+  } & { searchParams?: { [key: string]: string | string[] | undefined } }
 };
 
 type CaseItem = Case;
