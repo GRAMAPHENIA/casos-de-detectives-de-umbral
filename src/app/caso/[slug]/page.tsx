@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getCaseBySlug } from '@/lib/cases';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { ArrowLeft } from 'lucide-react';
 import type { Case } from '@/types/case';
 
 type CaseProps = {
@@ -47,7 +47,7 @@ export default async function CasePage({ params }: CaseProps) {
             href="/map" 
             className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors"
           >
-            <ArrowLeftIcon className="w-5 h-5 mr-2" />
+            <ArrowLeft className="w-5 h-5 mr-2" />
             Volver a los casos
           </Link>
           

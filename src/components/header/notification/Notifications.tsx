@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Bell } from 'lucide-react';
 import { Tooltip } from "@nextui-org/tooltip";
 import dynamic from "next/dynamic";
 
@@ -13,12 +14,8 @@ const NotificationContent = () => {
         className="p-1 hover:bg-zinc-800 rounded-md transition-colors"
         aria-label="Ver notificaciones"
       >
-        <Image
-          src="/icons/bell-notification.svg"
-          alt="Notificaciones"
-          width={24}
-          height={24}
-          className="invert-25 hover:invert-[1] transition-all"
+        <Bell
+          className="w-6 h-6"
         />
       </button>
     </Tooltip>

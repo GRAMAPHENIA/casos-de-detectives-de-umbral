@@ -2,6 +2,7 @@
 
 import { Tooltip } from "@nextui-org/tooltip";
 import Image from "next/image";
+import { MapPin } from 'lucide-react';
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { Case } from "@/types/case";
@@ -64,12 +65,8 @@ const MapButton = () => {
           className="p-1 hover:bg-zinc-800 rounded-md transition-colors"
           aria-label="Ver mapa de casos"
         >
-          <Image
-            src="/icons/map.svg"
-            alt="Mapa de Casos"
-            width={24}
-            height={24}
-            className="invert-25 hover:invert-[1] transition-all"
+          <MapPin
+            className="w-6 h-6"
           />
         </button>
       </Tooltip>
