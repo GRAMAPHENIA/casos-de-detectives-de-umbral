@@ -19,7 +19,7 @@ interface CasoCardProps {
 export function CasoCard({ caso }: CasoCardProps) {
   return (
     <Link
-      href={`/caso/${caso.slug}`}
+      href={`/casos/${caso.slug}`}
       className="group relative flex items-center gap-4 p-4 rounded-lg hover:bg-blue-500/10 transition-colors"
     >
       <div className="flex-1">
