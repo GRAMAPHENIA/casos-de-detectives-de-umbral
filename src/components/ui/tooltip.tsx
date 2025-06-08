@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 const TooltipProvider = TooltipPrimitive.Provider
 
-const Tooltip = ({ className, ...props }: React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Root>) => (
+const Tooltip = ({ ...props }: React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Root>) => (
   <TooltipPrimitive.Root {...props} />
 )
 Tooltip.displayName = TooltipPrimitive.Root.displayName
