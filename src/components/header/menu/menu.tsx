@@ -2,19 +2,7 @@
 
 import Image from "next/image";
 import Notifications from "../notification/Notifications";
-import { Tooltip } from "@nextui-org/tooltip";
-import dynamic from "next/dynamic";
-
-// Importaciones dinámicas para evitar problemas de hidratación
-const MapButton = dynamic(
-  () => import("../map/MapButton"),
-  { 
-    ssr: false,
-    loading: () => (
-      <div className="w-8 h-8 bg-zinc-800 rounded-md animate-pulse"></div>
-    )
-  }
-);
+import { Tooltip } from "@heroui/tooltip";
 
 const MenuButton = () => {
   return (
@@ -48,9 +36,6 @@ export default function Menu() {
         </li>
       </ul>
       <ul className="flex gap-4">
-        <li>
-          <MapButton />
-        </li>
         <li>
           <Notifications />
         </li>

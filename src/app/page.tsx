@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-900/10 to-blue-950/50">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-900/20 to-zinc-900/20">
       <header className="">
         <Menu />
       </header>
@@ -24,10 +24,10 @@ export default function Home() {
 
           <div className="space-y-4">
             <Link
-              href="/map"
+              href="/casos"
               className="inline-block px-6 py-3 bg-blue-500/10 text-blue-500 hover:text-blue-400 rounded-tl-xl rounded-br-xl hover:bg-blue-500/20 transition-colors text-lg font-medium"
             >
-              Buscar casos
+              Leer casos
             </Link>
           </div>
         </div>

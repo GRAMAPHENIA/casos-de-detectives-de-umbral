@@ -1,6 +1,6 @@
 
 import { Bell } from 'lucide-react';
-import { Tooltip } from "@nextui-org/tooltip";
+import { Tooltip } from "@heroui/tooltip";
 import dynamic from "next/dynamic";
 
 const NotificationContent = () => {
