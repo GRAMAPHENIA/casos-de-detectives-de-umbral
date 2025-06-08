@@ -7,11 +7,7 @@ export async function generateStaticParams() {
   return casos.map((caso) => ({ slug: caso.slug }));
 }
 
-type PageProps = {
-  params: { slug: string }
-};
-
-export default function CasoPage({ params }: PageProps) {
+export default async function CasoPage({ params }: { params: { slug: string } }) {
   const caso = casos.find((c) => c.slug === params.slug);
   if (!caso) return notFound();
 
