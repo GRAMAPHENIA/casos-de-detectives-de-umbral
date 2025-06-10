@@ -29,13 +29,12 @@ export default function CasoPage() {
 
       <main className="flex-grow flex flex-col items-center justify-center p-6">
         <div className="max-w-4xl w-full">
-          <div className="aspect-w-16 aspect-h-9 mb-8 relative rounded-lg overflow-hidden">
+          <div className="mb-8 relative rounded-lg overflow-hidden">
             <Image
               src={caso.imagen}
               alt={caso.titulo}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              width={100}
+              height={100}
             />
           </div>
 
