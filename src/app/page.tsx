@@ -1,4 +1,3 @@
-import Menu from "@/components/header/menu/menu";
 import Footer from "@/components/footer/footer";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,9 +5,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-900/20 to-zinc-900/20">
-      <header className="">
-        <Menu />
-      </header>
 
       <main className="flex-grow flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-md mx-auto text-center">
