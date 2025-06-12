@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900/20 to-zinc-900/20 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-zinc-900/30 p-6">
       <div className="text-center">
         <div className="relative w-40 h-40 mx-auto mb-8">
           <Image

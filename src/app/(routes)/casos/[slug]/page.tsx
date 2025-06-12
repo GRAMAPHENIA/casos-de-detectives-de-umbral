@@ -12,7 +12,7 @@ export default function CasoPage() {
 
   if (!caso) {
     return (
-      <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-900/20 to-zinc-900/20">
+      <div className="flex flex-col min-h-screen bg-zinc-900/30">
         <main className="flex-grow flex flex-col items-center justify-center p-6">
           <h1 className="text-2xl font-bold text-blue-500 mb-4">Caso no encontrado</h1>
           <p className="text-blue-500/80">El caso que estás buscando no existe.</p>
@@ -22,7 +22,7 @@ export default function CasoPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-900/20 to-zinc-900/20">
+    <div className="flex flex-col min-h-screen bg-zinc-900/30">
       <header>
         <Menu />
       </header>

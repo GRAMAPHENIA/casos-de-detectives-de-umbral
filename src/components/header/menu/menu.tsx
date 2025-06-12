@@ -10,15 +10,15 @@ const BackButton = () => {
   return (
     <Tooltip
       content="Volver"
-      placement="bottom"
-      className="bg-zinc-900 px-4 rounded-lg text-zinc-400"
+      placement="right"
+      className="bg-zinc-800/20 p-2 rounded-lg text-zinc-400"
     >
       <button
         onClick={() => router.back()}
-        className="p-1 hover:bg-zinc-800 rounded-md transition-colors"
+        className="p-1 hover:bg-zinc-800/20 rounded-md transition-colors"
         aria-label="Volver"
       >
-        <ArrowLeftToLine className="w-6 h-6 text-zinc-500" />
+        <ArrowLeftToLine className="w-8 h-8 text-zinc-500 p-1" />
       </button>
     </Tooltip>
   );

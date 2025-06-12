@@ -7,7 +7,7 @@ import { CasoResumen } from "@/components/casos/caso-resumen";
 
 export default function CasosPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-950/30 to-zinc-900/10">
+    <div className="flex flex-col min-h-screen bg-zinc-900/30">
       <header>
         <Menu />
       </header>
